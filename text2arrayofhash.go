@@ -25,11 +25,9 @@ func main() {
 	lineReader := bufio.NewReaderSize(file, 100)
 	for line, _, e := lineReader.ReadLine(); e == nil; line, _, e = lineReader.ReadLine() {
 		//		os.Stdout.Write(line)
-		if e == nil {
-			hash := splitLine(string(line))
-			// append hash to the array
-			text = append(text, hash)
-		}
+		hash := splitLine(string(line))
+		// append hash to the array
+		text = append(text, hash)
 	}
 
 	fmt.Print(text)
