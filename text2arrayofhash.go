@@ -11,6 +11,7 @@ func main() {
 	if len(os.Args) < 2 {
 		fmt.Printf("Usage: os.Args[0] file[test.txt]")
 		// read from stdin and output to stdout
+        os.Exit(1)
 	}
 
 	file, err := os.Open(os.Args[1])
